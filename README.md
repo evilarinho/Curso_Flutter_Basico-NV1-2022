@@ -32,6 +32,13 @@ FLUTTER NV1 - [05] Primeiro contato com o Flutter
 
  
 ________________________________________________________________
+FLUTTER NV1 - [06] Conhecendo os principais Widgets
+
+Scaffold
+appBar
+Column
+Container
+Row(
 
 
 ________________________________________________________________
