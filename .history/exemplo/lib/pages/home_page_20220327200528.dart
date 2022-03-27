@@ -1,6 +1,5 @@
 //stl
 
-import 'package:exemplo/pages/pageViews/one_page.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -27,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: _pageController,
         children: [
-          const OnePage(),
+          ,
           Container(color: Colors.red),
           Container(color: Colors.yellow)
         ],

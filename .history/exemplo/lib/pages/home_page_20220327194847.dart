@@ -1,6 +1,5 @@
 //stl
 
-import 'package:exemplo/pages/pageViews/one_page.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -27,17 +26,56 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: _pageController,
         children: [
-          const OnePage(),
+          Column(
+            children: [
+              Container(
+                height: 200,
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(color: Colors.blue),
+                child: const Center(
+                  child: Text(
+                    'Olá Mundo!',
+                    style: TextStyle(color: Colors.white, fontSize: 30),
+                  ),
+                ),
+                //shape: BoxShape.circle),
+              ),
+              //const Text('bla bla')
+              Row(
+                children: [
+                  Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                    child: const Center(
+                      child: Text(
+                        'Container 1',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    color: Colors.purple,
+                    height: 100,
+                    width: 100,
+                    child: const Center(
+                      child: Text(
+                        'Container 2',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
           Container(color: Colors.red),
           Container(color: Colors.yellow)
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: indexBottonNavigationBar,
+          currentIndex: 2,
           onTap: (int page) {
-            setState(() {
-              indexBottonNavigationBar = page;
-            });
             _pageController.animateToPage(
               page,
               duration: const Duration(microseconds: 300),

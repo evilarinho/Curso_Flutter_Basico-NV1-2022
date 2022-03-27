@@ -38,11 +38,61 @@ Scaffold
 appBar
 Column
 Container
-Row(
+Row
+-----------------------------
+Edilson
+main.dart
+Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      //theme: ThemeData(
+      //  primaryColor: Colors.red,
+      //),
+      home: HomePage(),
+    );
+  }
+-----------------------------
+Edilson
+home_page.dart
+Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: const Center(child: Text('AppBar')),
+      ),
 
+-----------------------------
+Vinicius Resende
+ThemeData não altera a cor da AppBar? Como alternativa tente:
+ThemeData(primarySwatch: Colors.red)
+Possivelmente alguma atualização no Material ou no próprio flutter
+-------------------------
+Jean Camargo
+Ao tentar alterar o tema do MaterialApp utilizando -> theme: ThemeData(primaryColor: Colors.green,),  deu erro. Consegui utilizando:
+theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green),
+      ),
+Deve ser alguma atualização.
 
 ________________________________________________________________
+FLUTTER NV1 - [07] PageView Widget
 
+>>> home_page.dart
+// ignore: must_be_immutable
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  //stl
+  final PageController _pageController = PageController();
+------------------------------------
+ bottomNavigationBar: BottomNavigationBar(
+          onTap: (int index) => _pageController.jumpToPage(index),
+>>>>>>>>>>
 
 ________________________________________________________________
 
