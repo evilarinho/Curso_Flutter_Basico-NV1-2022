@@ -41,10 +41,6 @@ class _HomePageState extends State<HomePage> {
               trailing: const Icon(Icons.arrow_forward),
               onTap: () {
                 _pageController.jumpToPage(0);
-                Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 0;
-                });
               },
             ),
             ListTile(
@@ -52,22 +48,11 @@ class _HomePageState extends State<HomePage> {
               trailing: const Icon(Icons.arrow_forward),
               onTap: () {
                 _pageController.jumpToPage(1);
-                Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 1;
-                });
               },
             ),
             ListTile(
               title: const Text('Item 3'),
               trailing: const Icon(Icons.arrow_forward),
-              onTap: () {
-                _pageController.jumpToPage(2);
-                Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 2;
-                });
-              },
             ),
           ],
         ),

@@ -42,9 +42,6 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 _pageController.jumpToPage(0);
                 Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 0;
-                });
               },
             ),
             ListTile(
@@ -53,9 +50,6 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 _pageController.jumpToPage(1);
                 Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 1;
-                });
               },
             ),
             ListTile(
@@ -64,9 +58,6 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 _pageController.jumpToPage(2);
                 Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 2;
-                });
               },
             ),
           ],

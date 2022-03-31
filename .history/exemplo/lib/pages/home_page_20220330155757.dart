@@ -26,49 +26,14 @@ class _HomePageState extends State<HomePage> {
       ),
       drawer: Drawer(
         child: ListView(
-          children: [
-            // ignore: prefer_const_constructors
+          children: const [
             UserAccountsDrawerHeader(
-              accountName: const Text('Deivid'),
-              accountEmail: const Text('deivid@email.com'),
-              currentAccountPicture: const CircleAvatar(
-                backgroundColor: Colors.greenAccent,
+              accountName: Text('Deivid'),
+              accountEmail: Text('deivid@email.com'),
+              currentAccountPicture: CircleAvatar(
                 child: Text('D'),
               ),
-            ),
-            ListTile(
-              title: const Text('Item 1'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {
-                _pageController.jumpToPage(0);
-                Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 0;
-                });
-              },
-            ),
-            ListTile(
-              title: const Text('Item 2'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {
-                _pageController.jumpToPage(1);
-                Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 1;
-                });
-              },
-            ),
-            ListTile(
-              title: const Text('Item 3'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {
-                _pageController.jumpToPage(2);
-                Navigator.pop(context);
-                setState(() {
-                  indexBottonNavigationBar = 2;
-                });
-              },
-            ),
+            )
           ],
         ),
       ),
