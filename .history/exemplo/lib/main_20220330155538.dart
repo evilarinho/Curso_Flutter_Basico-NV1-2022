@@ -1,4 +1,4 @@
-import 'package:exemplo/todo_list_page.dart';
+import 'package:exemplo/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       //theme: ThemeData(
       //  primaryColor: Colors.red,
       //),
-      home: const TodoListPage(),
+      home: const HomePage(),
     );
   }
 }
