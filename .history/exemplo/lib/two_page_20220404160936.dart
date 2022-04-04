@@ -7,7 +7,6 @@ class TwoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
-      appBar: AppBar(),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

@@ -5,15 +5,13 @@ class TwoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var args = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
-      appBar: AppBar(),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pop('Retorno');
+            Navigator.of(context).pop();
           },
-          child: Text('Voltar para a page anterior $args'),
+          child: const Text('Voltar para a page anterior'),
         ),
       ),
     );

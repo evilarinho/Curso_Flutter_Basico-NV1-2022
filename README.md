@@ -179,8 +179,41 @@ Deivid Willyan | Flutter
 Ah show de bola, deve ser o lint desde que gravei essa aula
 -------------------------------------------------
 
+>>>main.dart
+initialRoute: '/',
+      routes: {
+        '/': (_) => const OnePage(),
+        '/twoPage': (_) => const TwoPage(),
+      },
+
+>>>one_page.dart
 Utilizar o formato de pilha
 Navigator.of(context).push
+
+shild: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/twoPage', arguments: '123').then(
+                  // ignore: avoid_print
+                  (value) => print(value),
+                );
+          },
+          child: const Text('Ir para Segunda Page'),
+        )
+
+if(Navigator.of.(context).canPop()) {
+      Navigator.of.(context).pop('Retorno');
+}
+
+>>>two_page.dart
+Widget build(BuildContext context) {
+    var args = ModalRoute.of(context)!.settings.arguments as String;
+
+ child: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pop('Retorno');
+          },
+          child: Text('Voltar para a page anterior $args'),
+        )
 
 
 ________________________________________________________________
