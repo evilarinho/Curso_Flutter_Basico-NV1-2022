@@ -168,7 +168,19 @@ FloatinghActionButton
      Row
 
 ________________________________________________________________
+FLUTTER NV1 - [10] Navegação entre Pages
 
+-------------------------------------------------
+Felipe Pitol
+Só um adendo ao minuto 9:00.
+Quem estiver tendo erro na hora de compilar, basta remover a linha >> home: OnePage()
+Ele acusa erro de redundância quando esta setado home junto com Initial Route '/'
+Deivid Willyan | Flutter
+Ah show de bola, deve ser o lint desde que gravei essa aula
+-------------------------------------------------
+
+Utilizar o formato de pilha
+Navigator.of(context).push
 
 
 ________________________________________________________________

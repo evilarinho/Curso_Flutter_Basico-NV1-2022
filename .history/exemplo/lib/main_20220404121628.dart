@@ -1,3 +1,4 @@
+import 'package:exemplo/two_page.dart';
 import 'package:flutter/material.dart';
 import 'one_page.dart';
 
@@ -18,7 +19,13 @@ class MyApp extends StatelessWidget {
       //theme: ThemeData(
       //  primaryColor: Colors.red,
       //),
-      home: const OnePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (_) => const OnePage(),
+        '/twoPage': (_) => const TwoPage(
+              args: '',
+            ),
+      },
     );
   }
 }

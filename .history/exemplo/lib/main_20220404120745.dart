@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
       //theme: ThemeData(
       //  primaryColor: Colors.red,
       //),
-      home: const OnePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const OnePage(),
+      },
     );
   }
 }

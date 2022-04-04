@@ -1,5 +1,5 @@
+import 'package:exemplo/todo_list_page.dart';
 import 'package:flutter/material.dart';
-import 'one_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       //theme: ThemeData(
       //  primaryColor: Colors.red,
       //),
-      home: const OnePage(),
+      home: const TodoListPage(),
     );
   }
 }
