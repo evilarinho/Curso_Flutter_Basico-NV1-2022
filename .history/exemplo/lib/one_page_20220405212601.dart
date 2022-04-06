@@ -9,10 +9,9 @@ class OnePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: CustomButtonWidget(
-          disable: false,
+          disable: true,
           onPressed: () {},
           title: 'Custom BTN',
-          titleSize: 18,
         ),
       ),
     );

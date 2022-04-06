@@ -9,10 +9,13 @@ class OnePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: CustomButtonWidget(
-          disable: false,
-          onPressed: () {},
-          title: 'Custom BTN',
-          titleSize: 18,
+          onPressed: () {
+            Navigator.of(context).pushNamed('/twoPage', arguments: '123').then(
+                  // ignore: avoid_print
+                  (value) => print(value),
+                );
+          },
+          child: const Text('Ir para Segunda Page'),
         ),
       ),
     );
