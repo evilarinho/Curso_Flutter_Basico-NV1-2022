@@ -29,13 +29,7 @@ class _OnePageState extends State<OnePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ValueListenableBuilder(
-              valueListenable: valorAleatorio,
-              builder: (_, value, __) => Text(
-                'Valor é: $value',
-                style: const TextStyle(fontSize: 20),
-              ),
-            ),
+           ,
             const SizedBox(
               height: 10,
             ),

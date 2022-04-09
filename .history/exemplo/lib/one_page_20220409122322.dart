@@ -30,12 +30,7 @@ class _OnePageState extends State<OnePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ValueListenableBuilder(
-              valueListenable: valorAleatorio,
-              builder: (_, value, __) => Text(
-                'Valor é: $value',
-                style: const TextStyle(fontSize: 20),
-              ),
-            ),
+                valueListenable: valorAleatorio, builder: builder),
             const SizedBox(
               height: 10,
             ),

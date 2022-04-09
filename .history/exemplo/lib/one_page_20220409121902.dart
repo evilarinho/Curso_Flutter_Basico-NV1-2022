@@ -16,7 +16,9 @@ class _OnePageState extends State<OnePage> {
   randon() async {
     for (int i = 0; i < 10; i++) {
       await Future.delayed(const Duration(seconds: 1));
-      valorAleatorio.value = Random().nextInt(1000);
+      setState(() {
+        valorAleatorio = Random().nextInt(1000);
+      });
     }
   }
 
@@ -29,13 +31,8 @@ class _OnePageState extends State<OnePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ValueListenableBuilder(
-              valueListenable: valorAleatorio,
-              builder: (_, value, __) => Text(
-                'Valor é: $value',
-                style: const TextStyle(fontSize: 20),
-              ),
-            ),
+            Text('Valor é: $valorAleatorio',
+                style: const TextStyle(fontSize: 20)),
             const SizedBox(
               height: 10,
             ),

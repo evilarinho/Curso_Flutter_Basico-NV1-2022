@@ -32,7 +32,7 @@ class _OnePageState extends State<OnePage> {
             ValueListenableBuilder(
               valueListenable: valorAleatorio,
               builder: (_, value, __) => Text(
-                'Valor é: $value',
+                'Valor é: $valorAleatorio',
                 style: const TextStyle(fontSize: 20),
               ),
             ),

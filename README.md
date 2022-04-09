@@ -223,6 +223,14 @@ ________________________________________________________________
 
 FLUTTER NV1 - [12] Gerência de estado sem package (nativa)  
 
+aula12a
+setState()
+
+aula12b
+ValueNotifier<int> valorAleatorio = ValueNotifier<int>(0);
+
+minha dúvida publicada em 09/04/2022:
+### DÚVIDA: Uma vez que a versão atual do Flutter (em abril/2022) exige a inclusão da 'const' para os objetos imutáveis da memória, a combinação do 'setState()' com 'const' poderia substituir todas as necessidades da utilização do  'ValueListenableBuilder()'  no Flutter ?
 ________________________________________________________________
 
 
