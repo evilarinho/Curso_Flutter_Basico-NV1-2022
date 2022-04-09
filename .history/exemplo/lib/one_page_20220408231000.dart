@@ -24,25 +24,13 @@ class _OnePageState extends State<OnePage> {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: avoid_print
-    print('build');
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Valor é: $valorAleatorio',
-                style: const TextStyle(fontSize: 20)),
-            const SizedBox(
-              height: 10,
-            ),
-            CustomButtonWidget(
-              disable: false,
-              onPressed: () => randon(),
-              title: 'Custom BTN',
-              titleSize: 18,
-            ),
-          ],
+        child: CustomButtonWidget(
+          disable: false,
+          onPressed: () => randon(),
+          title: 'Custom BTN',
+          titleSize: 18,
         ),
       ),
     );

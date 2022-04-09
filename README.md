@@ -221,6 +221,7 @@ FLUTTER NV1 - [11] Criação de Widgets Personalizados
 
 ________________________________________________________________
 
+FLUTTER NV1 - [12] Gerência de estado sem package (nativa)  
 
 ________________________________________________________________
 
