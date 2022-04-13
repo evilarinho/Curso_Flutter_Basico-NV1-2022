@@ -267,7 +267,34 @@ https://jsonplaceholder.typicode.com/posts
 
 -------------------
 aula 13b - ValueNotifier<List<Post>>
+
+class _OnePageState extends State<OnePage> {
+  ValueNotifier<List<Post>> posts = ValueNotifier<List<Post>>([]);
+
+-------------------
+REVISÃO
+Como chamar uma API:
+ ValueNotifier<List<Post>> posts = ValueNotifier<List<Post>>([]);
+  ValueNotifier<bool> inLoader = ValueNotifier<bool>(false);
+Escutando mais de um evento:
+ AnimatedBuilder(
+                animation: Listenable.merge([posts, inLoader]),
+
+Fazer um from Json a partir de um objeto:
+class Post {
+  final int userId;
+  final int id;
+  final String title;
+  final String body;
+  Post(this.userId, this.id, this.title, this.body);
+  factory Post.fromJson(Map json) {
+    return Post(json['userId'], json['id'], json['title'], json['body']);
+  }
+
+Porém nossa classe descrita no arquivo one_page.dart ficou com mais de 80 linhas devido a grande quantidade de regras (camadas de API, regras de montagem de objetos e regras de views, montagem da page. Na próxima será apresentado o MVC, e vamos conhecer como separar as responsabilidades.
+
 ________________________________________________________________
+FLUTTER NV1 - [14] MVC Pattern: Organizando o projeto
 
 
 ________________________________________________________________

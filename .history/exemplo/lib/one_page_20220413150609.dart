@@ -18,16 +18,15 @@ class _OnePageState extends State<OnePage> {
   callAPI() async {
     var client = http.Client();
     try {
-      inLoader.value = true;
       var response = await client.get(
         Uri.parse('https://jsonplaceholder.typicode.com/posts'),
       );
       var decodedResponse = jsonDecode(response.body) as List;
-      posts.value = decodedResponse.map((e) => Post.fromJson(e)).toList();
-      await Future.delayed(const Duration(seconds: 2)); // ignore: avoid_print
+      posts.value = decodedResponse
+          .map((e) => Post.fromJson(e))
+          .toList(); // ignore: avoid_print
     } finally {
       client.close();
-      inLoader.value = false;
     }
   }
 
@@ -43,16 +42,14 @@ class _OnePageState extends State<OnePage> {
             children: [
               AnimatedBuilder(
                 animation: Listenable.merge([posts, inLoader]),
-                builder: (_, __) => inLoader.value
-                    ? const CircularProgressIndicator()
-                    : ListView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: posts.value.length,
-                        itemBuilder: (_, idx) => ListTile(
-                          title: Text(posts.value[idx].title),
-                        ),
-                      ),
+                builder: (_, __) => ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: posts.value.length,
+                  itemBuilder: (_, idx) => ListTile(
+                    title: Text(posts.value[idx].title),
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 10,

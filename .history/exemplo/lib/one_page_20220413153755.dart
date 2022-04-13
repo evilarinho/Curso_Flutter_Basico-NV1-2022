@@ -18,7 +18,6 @@ class _OnePageState extends State<OnePage> {
   callAPI() async {
     var client = http.Client();
     try {
-      inLoader.value = true;
       var response = await client.get(
         Uri.parse('https://jsonplaceholder.typicode.com/posts'),
       );
@@ -27,7 +26,6 @@ class _OnePageState extends State<OnePage> {
       await Future.delayed(const Duration(seconds: 2)); // ignore: avoid_print
     } finally {
       client.close();
-      inLoader.value = false;
     }
   }
 

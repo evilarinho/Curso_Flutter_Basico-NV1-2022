@@ -24,7 +24,7 @@ class _OnePageState extends State<OnePage> {
       );
       var decodedResponse = jsonDecode(response.body) as List;
       posts.value = decodedResponse.map((e) => Post.fromJson(e)).toList();
-      await Future.delayed(const Duration(seconds: 2)); // ignore: avoid_print
+      await Future.delayed(const Duration(seconds: 60)); // ignore: avoid_print
     } finally {
       client.close();
       inLoader.value = false;
