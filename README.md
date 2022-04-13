@@ -223,17 +223,50 @@ ________________________________________________________________
 
 FLUTTER NV1 - [12] Gerência de estado sem package (nativa)  
 
+-------------------
 aula12a
 setState()
 
+-------------------
 aula12b
 ValueNotifier<int> valorAleatorio = ValueNotifier<int>(0);
 
 minha dúvida publicada em 09/04/2022:
 ### DÚVIDA: Uma vez que a versão atual do Flutter (em abril/2022) exige a inclusão da 'const' para os objetos imutáveis da memória, a combinação do 'setState()' com 'const' poderia substituir todas as necessidades da utilização do  'ValueListenableBuilder()'  no Flutter ?
+
+PESQUISA EXTRA
+A única abordagem para gerenciar estados recomendado pelo Google e Flutterando: Provider.
+Mas necessita estudar esses três:
+Provider
+setState
+BLoC / Rx
+MobX
+Fonte: https://youtu.be/_F0GI2dnt-g - Como gerenciar estados no Flutter - OBRIGATÓRIO para iniciantes by Flutterando
+
 ________________________________________________________________
+FLUTTER NV1 - [13] Consumindo API com a lib HTTP
 
+-------------------
+aula13a - ValueNotifier<int>
+pub.dev
+    http
+    dio
 
+pubspec.yaml
+    dependecies:
+    http: ^0.13.4
+
+flutter pub get
+
+import 'package:http/http.dart' as http;
+
+Exemplos de APPIs
+https://jsonplaceholder.typicode.com/
+https://jsonplaceholder.typicode.com/posts
+É do tipo GET porque acessa pelo navegador
+
+-------------------
+aula 13b - ValueNotifier<List<Post>>
 ________________________________________________________________
 
 

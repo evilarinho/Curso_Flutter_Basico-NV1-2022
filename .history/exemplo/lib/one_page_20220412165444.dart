@@ -1,4 +1,4 @@
-import 'dart:convert';
+import 'dart:math';
 
 import 'package:exemplo/widgets/custom_button_widget.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +17,12 @@ class _OnePageState extends State<OnePage> {
   callAPI() async {
     var client = http.Client();
     try {
-      var response = await client.get(
-        Uri.parse('https://jsonplaceholder.typicode.com/posts'),
-      );
-      var decodedResponse = jsonDecode(response.body) as List;
-      List<Post> posts = decodedResponse.map((e) => Post.fromJson(e)).toList();
-      // ignore: avoid_print
-      print(posts);
+      var response = await client.post(
+          Uri.https('example.com', 'whatsit/create'),
+          body: {'name': 'doodle', 'color': 'blue'});
+      var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
+      var uri = Uri.parse(decodedResponse['uri'] as String);
+      print(await client.get(uri));
     } finally {
       client.close();
     }
@@ -50,7 +49,7 @@ class _OnePageState extends State<OnePage> {
             ),
             CustomButtonWidget(
               disable: false,
-              onPressed: () => callAPI(),
+              onPressed: () => randon(),
               title: 'Custom BTN',
               titleSize: 18,
             ),
@@ -58,22 +57,5 @@ class _OnePageState extends State<OnePage> {
         ),
       ),
     );
-  }
-}
-
-class Post {
-  final int userId;
-  final int id;
-  final String title;
-  final String body;
-
-  Post(this.userId, this.id, this.title, this.body);
-
-  factory Post.fromJson(Map json) {
-    return Post(json['userId'], json['id'], json['title'], json['body']);
-  }
-  @override
-  String toString() {
-    return 'id: $id';
   }
 }

@@ -72,8 +72,9 @@ class Post {
   factory Post.fromJson(Map json) {
     return Post(json['userId'], json['id'], json['title'], json['body']);
   }
-  @override
-  String toString() {
-    return 'id: $id';
-  }
+}
+
+@override
+String toString() {
+  return toString;
 }

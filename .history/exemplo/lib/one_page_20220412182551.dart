@@ -23,7 +23,7 @@ class _OnePageState extends State<OnePage> {
       var decodedResponse = jsonDecode(response.body) as List;
       List<Post> posts = decodedResponse.map((e) => Post.fromJson(e)).toList();
       // ignore: avoid_print
-      print(posts);
+      print(await posts);
     } finally {
       client.close();
     }
@@ -71,9 +71,5 @@ class Post {
 
   factory Post.fromJson(Map json) {
     return Post(json['userId'], json['id'], json['title'], json['body']);
-  }
-  @override
-  String toString() {
-    return 'id: $id';
   }
 }

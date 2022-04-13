@@ -1,8 +1,7 @@
-import 'dart:convert';
+import 'dart:math';
 
 import 'package:exemplo/widgets/custom_button_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class OnePage extends StatefulWidget {
   const OnePage({Key? key}) : super(key: key);
@@ -14,18 +13,10 @@ class OnePage extends StatefulWidget {
 class _OnePageState extends State<OnePage> {
   ValueNotifier<int> valorAleatorio = ValueNotifier<int>(0);
 
-  callAPI() async {
-    var client = http.Client();
-    try {
-      var response = await client.get(
-        Uri.parse('https://jsonplaceholder.typicode.com/posts'),
-      );
-      var decodedResponse = jsonDecode(response.body) as List;
-      List<Post> posts = decodedResponse.map((e) => Post.fromJson(e)).toList();
-      // ignore: avoid_print
-      print(posts);
-    } finally {
-      client.close();
+  randon() async {
+    for (int i = 0; i < 10; i++) {
+      await Future.delayed(const Duration(seconds: 1));
+      valorAleatorio.value = Random().nextInt(1000);
     }
   }
 
@@ -50,7 +41,7 @@ class _OnePageState extends State<OnePage> {
             ),
             CustomButtonWidget(
               disable: false,
-              onPressed: () => callAPI(),
+              onPressed: () => randon(),
               title: 'Custom BTN',
               titleSize: 18,
             ),
@@ -58,22 +49,5 @@ class _OnePageState extends State<OnePage> {
         ),
       ),
     );
-  }
-}
-
-class Post {
-  final int userId;
-  final int id;
-  final String title;
-  final String body;
-
-  Post(this.userId, this.id, this.title, this.body);
-
-  factory Post.fromJson(Map json) {
-    return Post(json['userId'], json['id'], json['title'], json['body']);
-  }
-  @override
-  String toString() {
-    return 'id: $id';
   }
 }

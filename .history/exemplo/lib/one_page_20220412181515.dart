@@ -20,10 +20,9 @@ class _OnePageState extends State<OnePage> {
       var response = await client.get(
         Uri.parse('https://jsonplaceholder.typicode.com/posts'),
       );
-      var decodedResponse = jsonDecode(response.body) as List;
-      List<Post> posts = decodedResponse.map((e) => Post.fromJson(e)).toList();
+      var decodedResponse = jsonDecode(response.body);
       // ignore: avoid_print
-      print(posts);
+      print(await decodedResponse);
     } finally {
       client.close();
     }
@@ -66,14 +65,14 @@ class Post {
   final int id;
   final String title;
   final String body;
-
-  Post(this.userId, this.id, this.title, this.body);
+  Post({
+    required this.userId,
+    required this.id,
+    required this.title,
+    required this.body,
+  });
 
   factory Post.fromJson(Map json) {
     return Post(json['userId'], json['id'], json['title'], json['body']);
-  }
-  @override
-  String toString() {
-    return 'id: $id';
   }
 }
