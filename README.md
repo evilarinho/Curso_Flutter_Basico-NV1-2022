@@ -296,8 +296,14 @@ Porém nossa classe descrita no arquivo one_page.dart ficou com mais de 80 linha
 ________________________________________________________________
 FLUTTER NV1 - [14] MVC Pattern: Organizando o projeto
 
+/lib/main.dart
+/lib/views/one_page.dart
+/lib/views/two_page.dart
+/lib/controllers/posts_controllers.dart
+/lib/models/posts_model.dart
 
 ________________________________________________________________
+FLUTTER NV1 - [15] Projeto: Splash Screen e Login Page
 
 
 ________________________________________________________________

@@ -1,4 +1,4 @@
-import 'package:exemplo/views/two_page.dart';
+import 'package:exemplo/two_page.dart';
 import 'package:flutter/material.dart';
 import 'views/one_page.dart';
 
