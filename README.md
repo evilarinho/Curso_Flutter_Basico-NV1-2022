@@ -305,6 +305,13 @@ FLUTTER NV1 - [14] MVC Pattern: Organizando o projeto
 ________________________________________________________________
 FLUTTER NV1 - [15] Projeto: Splash Screen e Login Page
 
+Criado Projeto: projeto01
+E efetuado uma limpeza do pubspec.yaml
+
+Objetivo:
+Rever todos os conceitos já estudados desde as aulas de Dart até as últimas aulas de Flutter.
+Esse desafio pode levar algumas aulas ou não. Nada a princípio muito planejado.
+O objetivo é criar uma casca de uma aplicação com Splash Screen, com uma tela de login,  depois com uma tela que faz requisição para uma API, depois manipula essa resposta de dados, utilizando a mesma API JsonPlaceHolder já utilizada com os Posts.
 
 ________________________________________________________________
 
