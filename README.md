@@ -314,7 +314,14 @@ Esse desafio pode levar algumas aulas ou não. Nada a princípio muito planejado
 O objetivo é criar uma casca de uma aplicação com Splash Screen, com uma tela de login,  depois com uma tela que faz requisição para uma API, depois manipula essa resposta de dados, utilizando a mesma API JsonPlaceHolder já utilizada com os Posts.
 
 ________________________________________________________________
+FLUTTER NV1 - [16] Projeto: LoginController e Navegação
 
+Aprendeu criar uma lógica bem simples a principío mokando, mas no futuro vamos injetar um repositório e consumir uma API.
+
+Fazer a alteração do nosso botão para LOADING.
+Como fazer a alteração após o resultado com sucesso ou mostrar uma mensagem em caso de falha.
+
+Na próxima aula vamos fazer algumas refatorações nessa page para seguir adiante.
 
 ________________________________________________________________
 
