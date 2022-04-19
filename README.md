@@ -330,7 +330,29 @@ Tem agora um componente que é uma extensão da nossa page.
 Um widget customizado e genérico.
 
 ________________________________________________________________
+FLUTTER NV1 - [18] Projeto: Repository Pattern
 
+Vamos começar a trabalhar na home page.
+
+https://jsonplaceholder.typicode.com/posts
+{
+		"userId": 1,
+		"id": 1,
+		"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+		"body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+	  }
+/assets/data.json
+
+pubspec.yaml
+flutter:
+  assets:
+      - assets/data.json
+
+Obs.: É uma boa prática sempre parar o projeto e subir novamente logo após alterar o pubspec.yaml
+
+Conhecer o novo padrão repositório Pattern. Deve ser aplicado toda vez que desejar buscar um dado de algum repositório, seja um repositório mokado, de uma API, no Firebase, ou seja, não importar o local desse repositório.
+
+/lib/repositories/home_repository.dart
 
 ________________________________________________________________
 
