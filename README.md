@@ -324,7 +324,10 @@ Como fazer a alteração após o resultado com sucesso ou mostrar uma mensagem e
 Na próxima aula vamos fazer algumas refatorações nessa page para seguir adiante.
 
 ________________________________________________________________
+FLUTTER NV1 - [17] Projeto: Refatorações: Components Vs Widgets
 
+Tem agora um componente que é uma extensão da nossa page. 
+Um widget customizado e genérico.
 
 ________________________________________________________________
 
