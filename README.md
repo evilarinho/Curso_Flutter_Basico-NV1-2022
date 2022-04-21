@@ -326,6 +326,7 @@ Na próxima aula vamos fazer algumas refatorações nessa page para seguir adian
 ________________________________________________________________
 FLUTTER NV1 - [17] Projeto: Refatorações: Components Vs Widgets
 
+Toda vez que nós quebrarmos uma page em alguns pedaços, esses pedaços vamos chamar de Components. E esses componentes são construídos com widgets da APIs padrões ou nossos widgets customizados.
 Tem agora um componente que é uma extensão da nossa page. 
 Um widget customizado e genérico.
 
@@ -354,8 +355,45 @@ Conhecer o novo padrão repositório Pattern. Deve ser aplicado toda vez que des
 
 /lib/repositories/home_repository.dart
 
+Criar um contrato:
+ home_repository.dart
+ abstract class HomeRepository {
+  Future<List<PostModel>> getList();
+}
+
+O primeiro parâmetro é o contexto, que eu ignoro com um "_"
+O segundo é o List<PostModel> que no caso chamamos de list que o resultado no post
+O terceiro é widget, que ingnoramos com "dois __"
+builder: (_, list, __)
+
+*** alteração Edison
+home_page.dart
+itemBuilder: (_, idx) => ListTile(
+                title: Text('title: ' +
+                    list[idx].title +
+                    '  //  ' +
+                    'body: ' +
+                    list[idx].body),
+              ),
+ )
+A revisão da aula no final  a partir do minuto 15:35, foi a cereja do bolo. Parabéns novamente pela alta qualidade de síntese e didática TOP 10!!! . Gratidão Prof. Deivid.
+________________________________________________________________
+FLUTTER NV1 - [19] Projeto: Consumindo API e Gerenciando Estado
+
+
+
 ________________________________________________________________
 
+________________________________________________________________
 
+________________________________________________________________
+
+________________________________________________________________
+
+________________________________________________________________
+
+________________________________________________________________
 
  
+
+
