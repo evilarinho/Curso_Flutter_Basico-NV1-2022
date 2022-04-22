@@ -30,7 +30,9 @@ class _HomePageState extends State<HomePage> {
             return ListView.builder(
               itemCount: list.length,
               itemBuilder: (_, idx) => ListTile(
-                title: Text('title: ' +
+                title: Text('id: ' +
+                    list[idx].id.toString() +
+                    ' title: ' +
                     list[idx].title +
                     '  //  ' +
                     'body: ' +
