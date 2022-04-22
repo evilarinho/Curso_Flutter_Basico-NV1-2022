@@ -376,11 +376,14 @@ itemBuilder: (_, idx) => ListTile(
                     list[idx].body),
               ),
  )
+
+Text(list[idx].id.toString())
+
 A revisão da aula no final  a partir do minuto 15:35, foi a cereja do bolo. Parabéns novamente pela alta qualidade de síntese e didática TOP 10!!! . Gratidão Prof. Deivid.
 ________________________________________________________________
 FLUTTER NV1 - [19] Projeto: Consumindo API e Gerenciando Estado
 
-
+APP replicado com sucesso. Show !!! Gratidão Prof. Deivid.
 
 ________________________________________________________________
 
