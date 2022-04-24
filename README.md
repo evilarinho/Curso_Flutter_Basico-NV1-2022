@@ -392,10 +392,15 @@ APP replicado com sucesso. Show !!! Gratidão Prof. Deivid.
 ________________________________________________________________
 FLUTTER NV1 - [20] Projeto: Passagem de Parâmetros via ModalRoute
 
-
-
 ________________________________________________________________
+FLUTTER NV1 - [21] Projeto: SharedPreferences - Usuário sempre logado
 
+shared_preferences 2.0.13
+https://pub.dev/packages/shared_preferences
+
+/lib/generated_plugin_registrant.dart
+
+Código replicado com sucesso. APP executando OK. Outra aula TOP 10!!!. Gratidão Prof. Deivid.
 ________________________________________________________________
 
 ________________________________________________________________

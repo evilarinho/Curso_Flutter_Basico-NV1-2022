@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto01/services/prefs_servide.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -13,8 +14,16 @@ class _SplashPageState extends State<SplashPage> {
     // ignore: todo
     // TODO: implement initState
     super.initState();
+
+    Future.wait([
+      PrefsService.isAuth(),
+      Future.delayed(const Duration(seconds: 3)),
+    ]).then((value) => value[0]
+        ? Navigator.of(context).pushReplacementNamed('/home')
+        : Navigator.of(context).pushReplacementNamed('/login'));
+    /*
     Future.delayed(const Duration(seconds: 3))
-        .then((_) => Navigator.of(context).pushReplacementNamed('/login'));
+        .then((_) => Navigator.of(context).pushReplacementNamed('/login'));*/
   }
 
   @override
