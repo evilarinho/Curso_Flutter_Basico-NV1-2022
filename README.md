@@ -383,9 +383,16 @@ A revisão da aula no final  a partir do minuto 15:35, foi a cereja do bolo. Par
 ________________________________________________________________
 FLUTTER NV1 - [19] Projeto: Consumindo API e Gerenciando Estado
 
-APP replicado com sucesso. Show !!! Gratidão Prof. Deivid.
+Chamadas a API com https://pub.dev/packages/dio
 
+https://jsonplaceholder.typicode.com/posts
+Ela é um get porque estamos acessando no navegador.
+
+APP replicado com sucesso. Show !!! Gratidão Prof. Deivid.
 ________________________________________________________________
+FLUTTER NV1 - [20] Projeto: Passagem de Parâmetros via ModalRoute
+
+
 
 ________________________________________________________________
 
